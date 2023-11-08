@@ -11566,3 +11566,54 @@ section.resume-section .resume-section-content {
   height: auto; /* Auto height to maintain aspect ratio */
   max-height: 100%; /* Ensure the image doesn't exceed the popup content area */
 }
+
+
+.publications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0;
+  list-style: none; /* Removes default list styling */
+}
+
+.publication-item {
+  border: 1px solid #ddd; /* Adds a border around the thumbnail */
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Adds a subtle shadow for depth */
+  transition: transform 0.2s; /* Animation for when the item is hovered over */
+  display: flex;
+  flex-direction: column; /* Structures the thumbnail and title in a column */
+  align-items: center; /* Centers the items */
+  overflow: hidden; /* Hides any overflow */
+}
+
+.publication-item:hover {
+  transform: scale(1.05); /* Slightly enlarges the thumbnail on hover */
+}
+
+.publication-link {
+  text-decoration: none; /* Removes default hyperlink underline */
+
+  display: flex; /* Uses flexbox for layout */
+  flex-direction: column; /* Arranges children in a column */
+  align-items: center; /* Centers the children */
+  width: 100%; /* Ensures the link takes the full width */
+}
+
+.publication-thumbnail {
+  width: 100%;
+  height: 300px; /* Example fixed height */
+  max-width: 250px;
+  object-fit: contain; /* This will cover the area without distorting the aspect ratio */
+  margin-bottom: 10px;
+}
+
+.publication-title {
+  text-align: center;
+  font-size: 1.2em;
+  width: 100%;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+  padding: 0 8px;
+  flex-grow: 1; /* Adds flex-grow to fill the space */
+}
